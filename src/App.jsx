@@ -7,6 +7,7 @@ import PlatformSelector from "../src/assets/components/PlatformSelector";
 
 function App() {
   const [selectedGenre, setSelectedGenre] = useState(null);
+  const [selectedPlatform, setSelectedPlatform] = useState(null);
   return (
     <Grid
       templateAreas={`"nav nav" "aside main"`}
@@ -29,8 +30,16 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main">
-        <PlatformSelector></PlatformSelector>
-        <GameGrid selectedGenre={selectedGenre}></GameGrid>
+        <PlatformSelector
+          onSelectPlatform={(platform) => {
+            setSelectedPlatform(platform);
+          }}
+          selectedPlatform={selectedPlatform}
+        ></PlatformSelector>
+        <GameGrid
+          selectedGenre={selectedGenre}
+          selectedPlatform={selectedPlatform}
+        ></GameGrid>
       </GridItem>
     </Grid>
   );
