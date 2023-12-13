@@ -3,7 +3,6 @@ import useGames from "../../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
-
 const GameGrid = (props) => {
   const { selectedGenre } = props;
   const { data, error, isLoading } = useGames(selectedGenre);

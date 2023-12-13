@@ -12,7 +12,7 @@ import {
 import getCroppedImageURL from "../services/imageurl";
 
 const GenreList = (props) => {
-  const { onSelectGenre } = props;
+  const { onSelectGenre, selectedGenre } = props;
   const { data, isLoading, error } = useGenres();
   const genres = data;
   if (isLoading) return <Spinner />;
@@ -28,6 +28,7 @@ const GenreList = (props) => {
             ></Image>
             <Button
               fontSize="lg"
+              fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
               variant="link"
               onClick={() => {
                 onSelectGenre(genre);
