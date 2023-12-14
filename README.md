@@ -11,23 +11,25 @@ Ensure you have Node.js installed on your machine. If not, you can download it f
 1. **Clone the project**
 
    Use the command below to clone the project:
-   git clone
+   ```git clone```
+   
+3. **Install dependencies**
 
-2. **Install dependencies**
+   Navigate into the project directory and run the following command to install all the necessary dependencies:
+   ```npm i```
 
-Navigate into the project directory and run the following command to install all the necessary dependencies:
+5. **Generate rawg API key**
 
-3. **Generate rawg API key**
+   Visit [rawg.io](https://rawg.io/apidocs), create an account and generate an API key.
 
-Visit [rawg.io](https://rawg.io/apidocs), create an account and generate an API key.
+6. **Update API configuration**
 
-4. **Update API configuration**
+   In the project directory, open the `apiconfig.js` file and replace the existing API key with the one you generated.
 
-In the project directory, open the `apiconfig.js` file and replace the existing API key with the one you generated.
+7. **Run the project**
 
-5. **Run the project**
-
-Use the command below to start the project:
+   Use the command below to start the project:
+   ```npm run dev```
 
 Now, your Game Discovery Project is up and running locally. Enjoy exploring!
 
@@ -35,5 +37,4 @@ Now, your Game Discovery Project is up and running locally. Enjoy exploring!
 
 - Explore the project and familiarize yourself with the codebase.
 - Try adding new features or improving existing ones.
-- Consider deploying the project for others to use.
 - Always keep your dependencies up to date.
