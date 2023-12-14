@@ -4,8 +4,8 @@ import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
 const GameGrid = (props) => {
-  const { selectedGenre, selectedPlatform } = props;
-  const { data, error, isLoading } = useGames(selectedGenre, selectedPlatform);
+  const { gameQuery } = props;
+  const { data, error, isLoading } = useGames(gameQuery);
   const games = data;
   const skeleton = [1, 2, 3, 4, 5, 6];
   return (
