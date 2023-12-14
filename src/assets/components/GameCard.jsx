@@ -10,11 +10,11 @@ const GameCard = (props) => {
     <Card>
       <Image src={getCroppedImageURL(game.background_image)} />
       <CardBody>
-        <Heading fontSize="2xl">{game.name}</Heading>
-        <HStack justifyContent={"space-between"}>
+        <HStack justifyContent={"space-between"} marginBottom={2}>
           <PlatformIconList game={game}></PlatformIconList>
           <CrticScore game={game}> </CrticScore>
         </HStack>
+        <Heading fontSize="2xl">{game.name}</Heading>
       </CardBody>
     </Card>
   );
